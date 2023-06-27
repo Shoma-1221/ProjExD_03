@@ -73,13 +73,17 @@ class Bird:
         引数2 screen：画面Surface
         """
         sum_mv = [0, 0]
+        
         for k, mv in __class__.delta.items():
+            
             if key_lst[k]:
                 sum_mv[0] += mv[0]
                 sum_mv[1] += mv[1]
         self.rct.move_ip(sum_mv)
+        
         if check_bound(self.rct) != (True, True):
             self.rct.move_ip(-sum_mv[0], -sum_mv[1])
+        
         if not (sum_mv[0] == 0 and sum_mv[1] == 0):  # 何かしらの矢印キーが押されていたら
             self.img = self.imgs[tuple(sum_mv)] 
         screen.blit(self.img, self.rct)
