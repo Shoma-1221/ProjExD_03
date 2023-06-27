@@ -150,7 +150,7 @@ def main():
     beam = None
 
     clock = pg.time.Clock()
-    tmr = 0
+    tmr = 0 
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT:
