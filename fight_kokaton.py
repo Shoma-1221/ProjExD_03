@@ -121,7 +121,7 @@ class Beam:
         self.rct = self.img.get_rect()
         self.rct.left = bird.rct.right
         self.rct.centery = bird.rct.centery
-        self.vx, self.vy = +5, 0
+        self.vx, self.vy = +5, 0 
 
 
     def update(self, screen: pg.Surface):
